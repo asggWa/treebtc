@@ -1,0 +1,10 @@
+Este repositorio de desarrollo de código pretende ser 
+independiente del de código de desarrollo.
+En tanto a tipos como strings o hases, no podemos
+otra cosa que delegar a terminos más radicales y próximos en traducción.
+Dado que polkadot y el dinero es una cosa importante, no
+queremos ofrecer cifras y datos erroneos.
+Como plataforma de desarrollo ahora nos iriamos a crates.io y 
+ya veíamos que en principio no había problema hasta los
+repositorios nvm. Encontrabamos diseños en replit, etc.
+Nuestro stake devuelve 10 cms/ahora. Y claro.
