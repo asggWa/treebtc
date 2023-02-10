@@ -1,3 +1,4 @@
+https://github.com/Pyzyryab/rustlang-es
 Este repositorio de desarrollo de código pretende ser 
 independiente del de código de desarrollo.
 En tanto a tipos como strings o hases, no podemos
@@ -7,4 +8,4 @@ queremos ofrecer cifras y datos erroneos.
 Como plataforma de desarrollo ahora nos iriamos a crates.io y 
 ya veíamos que en principio no había problema hasta los
 repositorios nvm. Encontrabamos diseños en replit, etc.
-Nuestro stake devuelve 10 cms/ahora. Y claro.
+
