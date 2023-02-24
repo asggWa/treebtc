@@ -1,3 +1,12 @@
+Update news.
+Damos un pequeño salto.
+Hasta ahora he estado configurando una bifulcación de polkadot que todavía no consigo entender completamente del todo y estoy estudiando.
+Con respecto al sistema, hemos evitado el exceso de espacio producido por los 500 gb de ram emulada por otro de la mitad o menos. así he conseguido conservar el estado inicial de polkadot y puedo tratar de usar un disco secundario como disco de arranque y poder asignar entonces sí, memoria emulada al sistema.
+Si tras establecer el arranque en el otro disco consigo un rendimiento igual o mayor, el disco secundario pasará a ser primario porque en el otro disco convive ubuntu junto a otro windows y actualmente está en deshuso y con una pequeña partición fat32 de restore y arcghivos personales.
+Windows no está siendo usado actualmente, sin embargo tampoco va a ser desinstalado porque además de ser el sistema original del equipo, algún día puedo querer jugar una partidad a leage of legend. :D
+
+
+
 # treebtc
 Si mis cálculos no fallan estamos tratando un ecosistema polkadot y veníamos de testear matic, al mismo tiempo.
 Lamentablemente no contamos con espacio suficiente en el disco duro para garantizar otros tres meses de trabajo.
