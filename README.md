@@ -1,4 +1,4 @@
-Update news.
+noUpdate news.
 Damos un pequeño salto.
 Hasta ahora he estado configurando una bifulcación de polkadot que todavía no consigo entender completamente del todo y estoy estudiando.
 Con respecto al sistema, hemos evitado el exceso de espacio producido por los 500 gb de ram emulada por otro de la mitad o menos. así he conseguido conservar el estado inicial de polkadot y puedo tratar de usar un disco secundario como disco de arranque y poder asignar entonces sí, memoria emulada al sistema.
