@@ -1,3 +1,11 @@
+#
+//Trato de rebasar por fecha tres o cuatro proyectos. La base es igual. Como siempre hay restricciones que embarranf nuestro propio camino.
+//Nuestro std out de texto tiene pocos links.
+//Hay poca pantalla y muchasr ramas de atención
+//Se rebasa cuatro paquetes privados haci target languages
+#
+
+
 Update news.
 Damos un pequeño salto.
 Hasta ahora he estado configurando una bifulcación de polkadot que todavía no consigo entender completamente del todo y estoy estudiando.
