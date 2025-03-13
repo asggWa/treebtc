@@ -1,0 +1,131 @@
+La librería time.h en C se utiliza para trabajar con fechas y horas. A través de ella, puedes obtener la hora actual, manipular fechas, medir el tiempo que tarda un programa en ejecutarse, entre otros.
+
+Aquí te dejo algunos ejemplos básicos de cómo utilizar esta librería:
+
+1. Obtener la hora y fecha actual
+
+El siguiente código muestra cómo obtener la fecha y hora actual utilizando la función time() y localtime():
+
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    // Obtener el tiempo actual en segundos desde el 1 de enero de 1970
+    time_t t;
+    time(&t);
+
+    // Convertir el tiempo a una estructura de tiempo local
+    struct tm *tm_info;
+    tm_info = localtime(&t);
+
+    // Imprimir la fecha y hora en formato legible
+    printf("Fecha y hora local: %s", asctime(tm_info));
+
+    return 0;
+}
+
+Este programa imprime la fecha y hora actual en formato legible.
+
+2. Medir el tiempo de ejecución
+
+Si quieres medir cuánto tiempo toma una parte de tu código, puedes usar clock() para obtener el tiempo que tarda la CPU en ejecutar una porción de código.
+
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    clock_t start, end;
+    double cpu_time_used;
+
+    start = clock();  // Comienza a contar el tiempo
+
+    // Aquí va el código cuya ejecución quieres medir
+    for (int i = 0; i < 100000000; i++);
+
+    end = clock();  // Finaliza el conteo
+
+    // Calcula el tiempo en segundos
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+
+    printf("El código tardó %f segundos en ejecutarse.\n", cpu_time_used);
+
+    return 0;
+}
+
+3. Diferencia entre dos tiempos
+
+También puedes usar time() para calcular el tiempo transcurrido entre dos eventos. Aquí te dejo un ejemplo de cómo calcular el tiempo que transcurre entre dos momentos:
+
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    time_t start, end;
+    double seconds;
+
+    // Obtener el tiempo inicial
+    time(&start);
+
+    // Simular alguna operación que tome tiempo (por ejemplo, un retraso)
+    for (long i = 0; i < 1000000000; i++);
+
+    // Obtener el tiempo final
+    time(&end);
+
+    // Calcular la diferencia en segundos
+    seconds = difftime(end, start);
+
+    printf("El proceso tardó %.f segundos.\n", seconds);
+
+    return 0;
+}
+
+4. Uso de struct tm para manipular fechas
+
+La estructura struct tm de la librería time.h permite manipular fechas y horas de forma más detallada. Por ejemplo, puedes cambiar el año, mes, día, hora, minuto, etc.
+
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    struct tm time_info = {0};
+
+    // Establecer fecha y hora manualmente
+    time_info.tm_year = 2025 - 1900; // Año 2025 (los años se cuentan desde 1900)
+    time_info.tm_mon = 2;            // Mes de marzo (0-11)
+    time_info.tm_mday = 13;          // Día 13
+    time_info.tm_hour = 12;          // Hora 12
+    time_info.tm_min = 30;           // Minuto 30
+    time_info.tm_sec = 0;            // Segundo 0
+
+    // Convertir a tiempo UNIX (segundos desde 1970)
+    time_t t = mktime(&time_info);
+
+    if (t != -1) {
+        printf("Fecha y hora formateada: %s", asctime(&time_info));
+    } else {
+        printf("Error al convertir la fecha.\n");
+    }
+
+    return 0;
+}
+
+Resumen de las funciones comunes de time.h:
+
+time_t time(time_t *t);: Obtiene la hora actual. Si se pasa un puntero a time_t, también devuelve el valor en él.
+
+struct tm *localtime(const time_t *t);: Convierte el tiempo a una estructura struct tm en la zona horaria local.
+
+struct tm *gmtime(const time_t *t);: Convierte el tiempo a una estructura struct tm en UTC (hora estándar).
+
+char *asctime(const struct tm *timeptr);: Convierte la estructura struct tm a una cadena de texto con formato de fecha y hora legible.
+
+time_t mktime(struct tm *timeptr);: Convierte una estructura struct tm a tiempo en segundos desde el 1 de enero de 1970.
+
+clock_t clock(void);: Devuelve el tiempo de CPU usado por el programa.
+
+double difftime(time_t end, time_t start);: Devuelve la diferencia en segundos entre dos tiempos.
+
+
+Con estos ejemplos puedes empezar a trabajar con fechas y tiempos en C. Si necesitas algo más específico, ¡dime!
+
