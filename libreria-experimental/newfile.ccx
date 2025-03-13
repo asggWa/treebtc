@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <time.h>
+#include<stdlib.h>
+int main(int argc, char *argv[])
+{
+	time_t t;
+	int contador=0;
+	
+	//time(&t)= printf("%d",t);
+	struct tm *tm_info;
+	tm_info=localtime(&t);
+	
+				printf("hola mundo\n %s", asctime(tm_info));
+	contador= contador +1;
+	return 0;
+}
